@@ -1,0 +1,141 @@
+/* Is used to remove basic style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* I used body tag to change the background color/color and font. also the min-height will let the body element grow more if neccessary */
+
+body {
+    background-image: linear-gradient(120deg, rgb(119, 191, 119), rgb(89, 180, 205));
+    color: azure;
+    font-family: "poppins", sans-serif;
+    min-height: 100vh;
+  }
+
+header {
+    font-size: 1.5rem;
+  }
+/* I used flex to centre the form and the header */
+form, header {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+form input, form button {
+        padding: 0.5rem;
+        font-size: 2rem;
+        border: none;
+        outline-color: rgb(183, 117, 244);
+        background: white;
+  }
+
+form button {
+    color: rgb(231, 139, 223);
+    background-color: rgb(164, 207, 220);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+        background-color: rgb(231, 139, 223);
+        color: rgb(164, 207, 220);
+    }
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 40%;
+    list-style: none;
+}
+
+.todo {
+    margin:0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.todo li {
+    flex:1;
+}
+.complete-btn {
+    background: rgb(42, 148, 42);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+.trash-btn {
+    background: rgb(243, 78, 78);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+/* this section is used to style the compleated and trash */
+
+
+/* when we click the completed button, the line will go through */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* when we click the trash button, the list will be removed */
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* filter section */
+select {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+outline: none;
+border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select {
+    color: rgb(231, 139, 223);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after {
+    content: "\25BC";
+    position:absolute;
+    background: rgb(231, 139, 223);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
